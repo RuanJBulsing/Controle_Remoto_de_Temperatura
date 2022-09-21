@@ -1,7 +1,15 @@
 /*
-*
-*
-*
+Definições dos pinos
+A0 - estrada do potenciometro
+D0 - entrada botão
+D1 - SCL do I2C
+D2 - SDA do I2C
+D3 - saida motor
+D4 - 
+D5 - saida led azul
+D6 - saida led verde
+D7 - saida led vermelho
+
 *Ruan Bulsing ago 2022
 */
 #include <PID_v1.h>
@@ -74,8 +82,8 @@ void setup() {
   digitalWrite(LED_BUILTIN, LOW); // liga o led para indicar que comecou a conexao
   WiFi.mode(WIFI_STA);
   Serial.print("Connecting to ");
-  Serial.println("NaoFunciona");
-  WiFi.begin("NaoFunciona", "naoseipq1");
+  Serial.println("--------");
+  WiFi.begin("--------", "**********");
   delay(1000);
 
   while (WiFi.status() != WL_CONNECTED) {
